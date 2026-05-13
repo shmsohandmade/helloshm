@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soap Making Workshop</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#f7f4ef;
+      color:#333;
+    }
+
+    header{
+      background:#d8c3a5;
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:20px;
+    }
+
+    section{
+      max-width:1000px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:16px;
+      margin-bottom:30px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2{
+      margin-top:0;
+    }
+
+    .button{
+      display:inline-block;
+      background:#8d6e63;
+      color:white;
+      padding:14px 24px;
+      border-radius:8px;
+      text-decoration:none;
+      margin-top:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px;
+      background:#eee;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Soap Making Workshop</h1>
+  <p>Create your own natural handmade soap</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>Workshop Overview</h2>
+    <p>
+      Learn the basics of cold process soap making in a beginner-friendly hands-on workshop.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>What You Will Learn</h2>
+    <ul>
+      <li>Soap making safety</li>
+      <li>Oil and lye basics</li>
+      <li>Colouring and scent blending</li>
+      <li>Soap pouring techniques</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Workshop Details</h2>
+    <p><strong>Duration:</strong> 2.5 Hours</p>
+    <p><strong>Location:</strong> Balakong, Selangor</p>
+    <p><strong>Suitable for:</strong> Beginners</p>
+  </div>
+
+  <div class="card">
+    <h2>Book Your Slot</h2>
+    <p>Contact us via WhatsApp to reserve your session.</p>
+
+    <a class="button" href="https://wa.me/60123456789">
+      WhatsApp Us
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  Handmade Soap Workshop © 2026
+</footer>
+
+</body>
+</html>
