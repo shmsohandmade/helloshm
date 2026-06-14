@@ -1,0 +1,802 @@
+.products-page{
+  min-height:100vh;
+  background:var(--color-bg);
+  padding:120px 40px;
+}
+
+.products-hero,
+.products-tools,
+.product-grid{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.products-hero{
+  position:relative;
+  min-height:560px;
+  overflow:hidden;
+  border-radius:32px;
+  background:
+    linear-gradient(90deg, rgba(251,250,247,0.96) 0%, rgba(251,250,247,0.84) 42%, rgba(251,250,247,0.24) 100%),
+    url("/Cover/Shampoocover.png");
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  padding:72px;
+  margin-bottom:54px;
+}
+
+.products-hero-content{
+  max-width:760px;
+}
+
+.products-kicker{
+  margin:0 0 18px;
+  color:var(--color-primary);
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.products-hero h1{
+  max-width:900px;
+  margin:0 0 28px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:72px;
+  line-height:1;
+}
+
+.products-hero p{
+  max-width:740px;
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  font-size:18px;
+  line-height:1.8;
+}
+
+.store-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:34px;
+}
+
+.store-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  border:1px solid var(--color-primary);
+  background:var(--color-button-primary-fade);
+  border-radius:999px;
+  padding:12px 20px;
+  color:white;
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+}
+
+.store-actions a:first-child,
+.store-actions a:nth-child(2){
+  background:var(--color-button-primary-fade);
+  color:white;
+}
+
+.store-actions .custom-order-link{
+  position:relative;
+  background:transparent;
+  color:var(--color-primary);
+}
+
+.custom-order-tooltip{
+  position:absolute;
+  top:calc(100% + 10px);
+  left:50%;
+  z-index:5;
+  width:max-content;
+  max-width:240px;
+  border:1px solid rgba(108,141,155,0.16);
+  border-radius:14px;
+  background:rgba(255,253,249,0.96);
+  box-shadow:0 10px 26px rgba(0,0,0,0.08);
+  padding:9px 12px;
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  font-size:12px;
+  line-height:1.5;
+  opacity:0;
+  pointer-events:none;
+  text-align:center;
+  transform:translate(-50%, -4px);
+  transition:opacity 0.18s ease, transform 0.18s ease;
+}
+
+.custom-order-link:hover .custom-order-tooltip,
+.custom-order-link:focus .custom-order-tooltip{
+  opacity:1;
+  transform:translate(-50%, 0);
+}
+
+.products-tools{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:34px;
+}
+
+.product-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.product-filters button{
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:var(--color-button-primary-fade);
+  padding:11px 16px;
+  color:white;
+  cursor:pointer;
+  font-family:'Inter', sans-serif;
+}
+
+.product-filters button.active{
+  background:var(--color-button-primary-fade);
+  color:white;
+}
+
+.product-controls{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.product-search{
+  min-width:220px;
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:var(--color-surface);
+  padding:12px 16px;
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+}
+
+.product-search::placeholder{
+  color:rgba(85,85,85,0.7);
+}
+
+.product-sort{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+}
+
+.product-sort select{
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:var(--color-surface);
+  padding:11px 16px;
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));
+  gap:22px;
+  align-items:stretch;
+}
+
+.product-card{
+  --category-color:var(--color-primary);
+  --category-soft:var(--color-ocean-soft);
+
+  width:100%;
+  min-height:496px;
+  border:1px solid rgba(0,0,0,0.04);
+  border-radius:24px;
+  background:var(--color-surface);
+  padding:18px;
+  text-align:left;
+  box-shadow:0 8px 30px rgba(0,0,0,0.04);
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  color:inherit;
+  text-decoration:none;
+}
+
+.product-card:hover{
+  border-color:var(--category-color);
+  transform:translateY(-3px);
+}
+
+.category-hair-care{
+  --category-color:#6f5f8f;
+  --category-soft:#f0edf5;
+}
+
+.category-body-care{
+  --category-color:#9a6548;
+  --category-soft:#f4e8df;
+}
+
+.category-household-care{
+  --category-color:#384840;
+  --category-soft:#e3e9e5;
+}
+
+.product-image{
+  width:100%;
+  height:210px;
+  border-radius:18px;
+  object-fit:cover;
+  display:block;
+  margin-bottom:18px;
+}
+
+.product-image-large{
+  height:100%;
+  min-height:460px;
+  margin-bottom:0;
+}
+
+.product-image-placeholder{
+  display:flex;
+  align-items:flex-end;
+  background:linear-gradient(135deg, var(--color-ocean-soft), var(--color-green-soft));
+  padding:18px;
+}
+
+.product-image-placeholder span{
+  color:var(--color-secondary);
+  font-family:'Inter', sans-serif;
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.product-category{
+  align-self:flex-start;
+  border-radius:999px;
+  background:var(--category-soft);
+  padding:7px 10px;
+  color:var(--category-color);
+  font-family:'Inter', sans-serif;
+  font-size:12px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.product-card h2{
+  min-height:64px;
+  margin:12px 0 10px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+  line-height:1.05;
+}
+
+.product-card p{
+  min-height:68px;
+  margin:0 0 16px;
+  color:var(--color-muted);
+  line-height:1.6;
+}
+
+.product-card strong{
+  margin-top:auto;
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+}
+
+.product-empty{
+  grid-column:1 / -1;
+  margin:0;
+  border-radius:24px;
+  background:var(--color-surface);
+  padding:44px;
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  text-align:center;
+}
+
+.product-type{
+  color:var(--color-primary);
+  font-weight:500;
+}
+
+.product-detail-page{
+  min-height:100vh;
+  background:var(--color-bg);
+  padding:110px 40px 120px;
+}
+
+.product-back-link{
+  display:block;
+  max-width:1180px;
+  margin:0 auto 30px;
+  color:var(--color-primary);
+  font-family:'Inter', sans-serif;
+  font-weight:500;
+  text-decoration:none;
+}
+
+.product-detail-hero,
+.product-info-grid,
+.product-not-found{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.product-detail-hero{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap:44px;
+  align-items:stretch;
+}
+
+.product-detail-media,
+.product-detail-content,
+.product-info-grid article,
+.product-not-found{
+  background:var(--color-surface);
+  border-radius:28px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.04);
+}
+
+.product-detail-media{
+  overflow:hidden;
+  min-height:460px;
+}
+
+.product-detail-content{
+  padding:46px;
+}
+
+.product-detail-content h1,
+.product-not-found h1{
+  margin:18px 0 14px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:64px;
+  line-height:1;
+}
+
+.product-detail-content p,
+.product-info-grid p,
+.product-not-found p{
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  line-height:1.85;
+}
+
+.product-price{
+  display:block;
+  margin:24px 0;
+  color:var(--color-text);
+  font-size:28px;
+}
+
+.product-price-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:-10px 0 24px;
+}
+
+.product-price-options span{
+  border:2px solid var(--color-text);
+  border-radius:999px;
+  background:var(--category-soft);
+  padding:8px 12px;
+  color:var(--category-color);
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+  font-weight:600;
+}
+
+.product-detail-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:32px;
+}
+
+.product-detail-actions a,
+.product-not-found a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  border:1px solid var(--color-primary);
+  background:var(--color-button-primary-fade);
+  border-radius:999px;
+  padding:12px 20px;
+  color:white;
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+}
+
+.product-detail-actions .product-order-link{
+  background:var(--color-button-primary-fade);
+  color:white;
+}
+
+.product-detail-actions .product-shopee-link{
+  background:transparent;
+  color:var(--color-primary);
+}
+
+.product-gallery{
+  max-width:1180px;
+  margin:30px auto 0;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:18px;
+}
+
+.product-gallery-thumb{
+  overflow:hidden;
+  border:1px solid transparent;
+  border-radius:24px;
+  background:var(--color-surface);
+  box-shadow:0 8px 30px rgba(0,0,0,0.04);
+  cursor:pointer;
+  padding:0;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.product-gallery-thumb:hover,
+.product-gallery-thumb:focus-visible{
+  border-color:var(--category-color);
+  box-shadow:0 12px 34px rgba(0,0,0,0.08);
+  transform:translateY(-2px);
+}
+
+.product-gallery-thumb.active{
+  border-color:var(--category-color);
+  box-shadow:0 0 0 4px var(--category-soft), 0 12px 34px rgba(0,0,0,0.08);
+}
+
+.product-gallery img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+}
+
+.product-info-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:24px;
+  margin-top:30px;
+}
+
+.product-info-grid article,
+.product-not-found{
+  padding:36px;
+}
+
+.product-info-grid article:nth-child(2){
+  background:var(--color-green-soft);
+}
+
+.product-info-grid article.product-impact-info{
+  position:relative;
+  overflow:hidden;
+  border:1px solid #365B6d;
+  background:#365B6d;
+  box-shadow:0 14px 36px rgba(63,76,70,0.12);
+}
+
+.product-info-grid article.product-impact-info h2,
+.product-info-grid article.product-impact-info p{
+  color:#F7F7F7;
+}
+
+.product-impact-media{
+  position:relative;
+  margin:-36px -36px 28px;
+  aspect-ratio:21 / 8;
+  overflow:hidden;
+  background:var(--category-soft);
+}
+
+.product-impact-media > img:first-child{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.product-impact-logo{
+  position:absolute;
+  top:16px;
+  right:16px;
+  width:72px;
+  height:72px;
+  border-radius:999px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.12);
+  object-fit:contain;
+}
+
+.product-info-grid h2{
+  margin:0 0 12px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:36px;
+}
+
+.product-info-grid h3{
+  margin:0 0 12px;
+  color:var(--category-color);
+  font-family:'Inter', sans-serif;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.5;
+}
+
+.product-info-grid ol{
+  margin:0;
+  padding-left:20px;
+}
+
+.product-key-points{
+  display:grid;
+  gap:14px;
+  margin:0;
+  border:1px solid color-mix(in srgb, var(--category-color) 24%, white);
+  border-radius:18px;
+  padding:28px;
+  list-style:none;
+  min-height:100%;
+  align-content:center;
+  text-align:center;
+}
+
+.product-key-points li{
+  position:relative;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  padding:0;
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+  font-size:1.33rem;
+  font-weight:400;
+  letter-spacing:0.05em;
+  line-height:1.5;
+}
+
+.product-key-points li + li{
+  margin-top:0;
+}
+
+.product-info-grid li{
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  line-height:1.8;
+}
+
+.product-info-grid .product-key-points li{
+  color:var(--color-text);
+  font-family:'Clean Up Your Mess', 'Shorelines Script', 'Brush Script MT', 'Segoe Script', cursive;
+  font-size:1.6rem;
+  font-weight:700;
+  line-height:1.5;
+}
+
+.product-info-grid li + li{
+  margin-top:10px;
+}
+
+.product-info-note{
+  margin:18px 0 0;
+  border-top:1px solid color-mix(in srgb, var(--category-color) 18%, white);
+  padding-top:14px;
+  font-size:12px;
+}
+
+@media (max-width: 980px){
+  .product-grid{
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .product-detail-hero,
+  .product-info-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-image-large,
+  .product-detail-media{
+    min-height:360px;
+  }
+}
+
+@media (max-width: 768px){
+  .products-page{
+    padding:90px 24px;
+  }
+
+  .products-hero{
+    min-height:auto;
+    border-radius:24px;
+    padding:52px 32px;
+    background:
+      linear-gradient(180deg, rgba(251,250,247,0.97) 0%, rgba(251,250,247,0.9) 58%, rgba(251,250,247,0.52) 100%),
+      url("/Cover/Shampoocover.png");
+    background-position:center;
+    background-size:cover;
+  }
+
+  .products-hero h1{
+    font-size:50px;
+  }
+
+  .products-hero p{
+    font-size:16px;
+  }
+
+  .products-tools{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .product-filters{
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:8px;
+  }
+
+  .product-filters button{
+    width:100%;
+    min-height:38px;
+    padding:8px 10px;
+    font-size:12px;
+    line-height:1.25;
+  }
+
+  .product-controls,
+  .product-search,
+  .product-sort{
+    width:100%;
+  }
+
+  .product-sort select{
+    flex:1;
+  }
+
+  .product-card{
+    min-height:0;
+  }
+
+  .product-image{
+    height:230px;
+  }
+
+  .product-card h2,
+  .product-card p{
+    min-height:0;
+  }
+
+  .product-detail-page{
+    padding:88px 24px 90px;
+  }
+
+  .product-detail-content{
+    padding:34px;
+  }
+
+  .product-detail-content h1,
+  .product-not-found h1{
+    font-size:46px;
+  }
+
+  .product-info-grid article,
+  .product-not-found{
+    padding:30px;
+  }
+
+  .product-impact-media{
+    margin:-30px -30px 24px;
+  }
+
+  .product-detail-actions{
+    flex-direction:column;
+  }
+
+  .product-detail-actions a{
+    width:100%;
+  }
+}
+
+@media (max-width: 520px){
+  .products-page{
+    padding:72px 20px;
+  }
+
+  .products-hero{
+    padding:40px 24px;
+    border-radius:20px;
+  }
+
+  .products-hero h1{
+    font-size:40px;
+  }
+
+  .store-actions{
+    flex-direction:column;
+  }
+
+  .store-actions a{
+    width:100%;
+  }
+
+  .custom-order-tooltip{
+    position:static;
+    display:block;
+    width:100%;
+    max-width:none;
+    margin-top:8px;
+    opacity:1;
+    transform:none;
+  }
+
+  .product-filters{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:7px;
+  }
+
+  .product-filters button{
+    min-height:38px;
+    padding:7px 5px;
+    font-size:9px;
+  }
+
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-detail-page{
+    padding:72px 20px 76px;
+  }
+
+  .product-card,
+  .product-detail-content,
+  .product-detail-media,
+  .product-gallery-thumb,
+  .product-info-grid article,
+  .product-not-found{
+    border-radius:20px;
+  }
+
+  .product-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .product-detail-content h1,
+  .product-not-found h1{
+    font-size:38px;
+  }
+
+  .product-image-large,
+  .product-detail-media{
+    min-height:300px;
+  }
+}

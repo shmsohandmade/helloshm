@@ -1,0 +1,114 @@
+.impact-section{
+  background:var(--color-bg-soft);
+
+  padding:100px 40px;
+
+  text-align:center;
+}
+
+.impact-header{
+  max-width:760px;
+
+  margin:0 auto 70px;
+}
+
+.impact-label{
+  font-family:'Inter', sans-serif;
+
+  font-size:13px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  color:var(--color-primary);
+
+  margin-bottom:18px;
+}
+
+.impact-header h2{
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:56px;
+
+  line-height:1.1;
+
+  color:var(--color-text);
+
+  margin-bottom:24px;
+}
+
+.impact-description{
+  font-family:'Inter', sans-serif;
+
+  font-size:17px;
+
+  line-height:1.8;
+
+  color:var(--color-muted);
+}
+
+.impact-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+  gap:24px;
+
+  max-width:1000px;
+
+  margin:0 auto 40px;
+}
+
+.impact-card{
+  background:var(--color-green-soft);
+
+  padding:50px 30px;
+
+  border-radius:28px;
+
+  box-shadow:0 6px 24px rgba(0,0,0,0.04);
+}
+
+.impact-card h3{
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:64px;
+
+  color:var(--color-green-deep);
+
+  margin-bottom:14px;
+}
+
+.impact-card p{
+  font-family:'Inter', sans-serif;
+
+  line-height:1.7;
+
+  color:var(--color-muted);
+}
+
+.impact-note{
+  font-family:'Inter', sans-serif;
+
+  font-size:13px;
+
+  opacity:0.6;
+}
+
+@media (max-width:768px){
+
+  .impact-section{
+    padding:80px 24px;
+  }
+
+  .impact-header h2{
+    font-size:42px;
+  }
+
+  .impact-card h3{
+    font-size:48px;
+  }
+
+}

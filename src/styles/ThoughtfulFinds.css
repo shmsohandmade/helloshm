@@ -1,0 +1,462 @@
+.thoughtful-page{
+  min-height:100vh;
+  background:var(--color-bg);
+  padding:120px 40px;
+}
+
+.thoughtful-hero,
+.thoughtful-tools,
+.thoughtful-filters,
+.thoughtful-map-layout,
+.thoughtful-cta{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.thoughtful-hero{
+  margin-bottom:42px;
+}
+
+.thoughtful-kicker{
+  margin:0 0 18px;
+  color:var(--color-primary);
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.thoughtful-hero h1,
+.thoughtful-cta h2{
+  margin:0 0 24px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:72px;
+  line-height:1;
+}
+
+.thoughtful-hero p,
+.thoughtful-cta p{
+  max-width:760px;
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  font-size:17px;
+  line-height:1.8;
+}
+
+.thoughtful-hero .thoughtful-subtitle{
+  max-width:900px;
+  color:var(--color-text);
+  font-size:22px;
+}
+
+.thoughtful-tools{
+  display:flex;
+  gap:14px;
+  margin-bottom:20px;
+}
+
+.thoughtful-tools input,
+.thoughtful-tools select{
+  min-height:48px;
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:var(--color-surface);
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+}
+
+.thoughtful-tools input{
+  flex:1;
+  min-width:240px;
+  padding:12px 18px;
+}
+
+.thoughtful-tools select{
+  padding:12px 18px;
+}
+
+.thoughtful-filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:34px;
+}
+
+.thoughtful-filters button{
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:transparent;
+  padding:10px 15px;
+  color:var(--color-primary);
+  cursor:pointer;
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+}
+
+.thoughtful-filters button.active{
+  background:var(--color-button-primary-fade);
+  color:white;
+}
+
+.thoughtful-map-layout{
+  display:grid;
+  grid-template-columns:minmax(0, 1.45fr) minmax(300px, 0.75fr);
+  gap:28px;
+  align-items:start;
+  scroll-margin-top:110px;
+}
+
+.thoughtful-map-panel,
+.thoughtful-card,
+.thoughtful-cta{
+  border-radius:28px;
+  background:var(--color-surface);
+  box-shadow:0 8px 30px rgba(0,0,0,0.04);
+}
+
+.thoughtful-map-panel{
+  position:sticky;
+  top:92px;
+  max-height:calc(100vh - 116px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:26px;
+  scrollbar-color:var(--color-primary) rgba(108,141,155,0.12);
+  scrollbar-width:thin;
+}
+
+.thoughtful-leaflet-map{
+  overflow:hidden;
+  min-height:660px;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 30% 22%, rgba(255,255,255,0.78), transparent 28%),
+    linear-gradient(135deg, var(--color-ocean-soft), color-mix(in srgb, var(--color-primary) 22%, white));
+  z-index:0;
+}
+
+.thoughtful-leaflet-map .leaflet-control-attribution{
+  font-family:'Inter', sans-serif;
+  font-size:10px;
+}
+
+.thoughtful-leaflet-map .leaflet-popup-content-wrapper{
+  border-radius:14px;
+  box-shadow:0 10px 26px rgba(0,0,0,0.14);
+}
+
+.thoughtful-leaflet-map .leaflet-popup-content{
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+  line-height:1.55;
+}
+
+.thoughtful-leaflet-map .leaflet-popup-content a{
+  color:var(--color-primary);
+  font-weight:600;
+}
+
+.thoughtful-leaflet-pin{
+  border:2px solid white;
+  border-radius:999px;
+  background:var(--color-button-primary-fade);
+  box-shadow:0 8px 18px rgba(0,0,0,0.24);
+}
+
+.thoughtful-leaflet-pin span{
+  display:block;
+  width:12px;
+  height:12px;
+  margin:4px;
+  border-radius:999px;
+  background:var(--color-primary);
+}
+
+.featured-place{
+  margin-top:22px;
+  border-left:4px solid var(--color-primary);
+  padding-left:20px;
+}
+
+.featured-place span,
+.thoughtful-card span{
+  color:var(--color-primary);
+  font-family:'Inter', sans-serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+}
+
+.featured-place h2,
+.thoughtful-card h2{
+  margin:10px 0 10px;
+  color:var(--color-text);
+  font-family:'Cormorant Garamond', serif;
+  font-size:34px;
+  line-height:1.08;
+}
+
+.featured-place p,
+.thoughtful-card p{
+  color:var(--color-muted);
+  line-height:1.75;
+}
+
+.featured-place a,
+.thoughtful-card a,
+.thoughtful-card-actions button,
+.thoughtful-cta a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  border:1px solid var(--color-primary);
+  border-radius:999px;
+  background:var(--color-button-primary-fade);
+  padding:11px 18px;
+  color:white;
+  font-family:'Inter', sans-serif;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+}
+
+.thoughtful-card-actions button{
+  cursor:pointer;
+}
+
+.thoughtful-list{
+  display:grid;
+  gap:12px;
+}
+
+.thoughtful-card{
+  border:1px solid rgba(108,141,155,0.12);
+  overflow:hidden;
+  padding:0;
+  transition:border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.thoughtful-card.active{
+  border-color:var(--color-primary);
+  box-shadow:0 10px 30px rgba(108,141,155,0.14);
+}
+
+.thoughtful-card.expanded{
+  transform:translateY(-2px);
+}
+
+.thoughtful-card-summary{
+  width:100%;
+  border:0;
+  background:transparent;
+  padding:18px 20px;
+  cursor:pointer;
+  text-align:left;
+}
+
+.thoughtful-card-summary:hover,
+.thoughtful-card-summary:focus-visible{
+  background:rgba(108,141,155,0.07);
+}
+
+.thoughtful-card-summary h2{
+  margin-bottom:0;
+  font-size:27px;
+}
+
+.thoughtful-card-details{
+  border-top:1px solid rgba(108,141,155,0.12);
+  padding:18px 20px 22px;
+}
+
+.thoughtful-card-image,
+.thoughtful-card-image-placeholder{
+  width:100%;
+  aspect-ratio:4 / 3;
+  border-radius:18px;
+  margin-bottom:18px;
+}
+
+.thoughtful-card-image{
+  display:block;
+  object-fit:cover;
+}
+
+.thoughtful-card-image-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px dashed rgba(108,141,155,0.35);
+  background:
+    linear-gradient(135deg, var(--color-ocean-soft), rgba(242,239,232,0.76));
+  color:var(--color-muted);
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+}
+
+.thoughtful-card dl{
+  display:grid;
+  gap:12px;
+  margin:18px 0 22px;
+}
+
+.thoughtful-card dt{
+  color:var(--color-text);
+  font-family:'Inter', sans-serif;
+  font-size:13px;
+  font-weight:700;
+}
+
+.thoughtful-card dd{
+  margin:4px 0 0;
+  color:var(--color-muted);
+  line-height:1.6;
+}
+
+.thoughtful-card-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.thoughtful-card-actions button{
+  background:transparent;
+  color:var(--color-primary);
+}
+
+.thoughtful-empty{
+  border-radius:24px;
+  background:var(--color-surface);
+  padding:44px;
+  color:var(--color-muted);
+  text-align:center;
+}
+
+.thoughtful-cta{
+  margin-top:70px;
+  padding:42px;
+}
+
+.thoughtful-cta h2{
+  max-width:840px;
+  font-size:52px;
+}
+
+.thoughtful-cta a{
+  margin-top:14px;
+}
+
+@media (max-width:900px){
+  .thoughtful-map-layout{
+    grid-template-columns:1fr;
+  }
+
+  .thoughtful-map-panel{
+    position:static;
+    max-height:none;
+    overflow:visible;
+  }
+}
+
+@media (max-width:768px){
+  .thoughtful-page{
+    padding:90px 24px;
+  }
+
+  .thoughtful-hero h1{
+    font-size:50px;
+  }
+
+  .thoughtful-hero .thoughtful-subtitle{
+    font-size:18px;
+  }
+
+  .thoughtful-tools{
+    flex-direction:column;
+  }
+
+  .thoughtful-tools input,
+  .thoughtful-tools select{
+    width:100%;
+  }
+
+  .thoughtful-filters{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:8px;
+  }
+
+  .thoughtful-filters button{
+    width:100%;
+    min-height:38px;
+    padding:8px 10px;
+    font-size:11px;
+    line-height:1.25;
+  }
+
+  .thoughtful-leaflet-map{
+    min-height:500px;
+  }
+
+  .thoughtful-cta h2{
+    font-size:42px;
+  }
+}
+
+@media (max-width:520px){
+  .thoughtful-page{
+    padding:72px 20px;
+  }
+
+  .thoughtful-hero h1{
+    font-size:40px;
+  }
+
+  .thoughtful-filters{
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    gap:7px;
+  }
+
+  .thoughtful-filters button{
+    min-height:38px;
+    padding:7px 5px;
+    font-size:9px;
+    letter-spacing:0.2px;
+  }
+
+  .thoughtful-map-panel,
+  .thoughtful-card,
+  .thoughtful-cta{
+    border-radius:20px;
+  }
+
+  .thoughtful-map-panel,
+  .thoughtful-cta{
+    padding:22px;
+  }
+
+  .thoughtful-leaflet-map{
+    min-height:420px;
+  }
+
+  .thoughtful-card h2,
+  .featured-place h2{
+    font-size:30px;
+  }
+
+  .thoughtful-cta h2{
+    font-size:34px;
+  }
+
+  .thoughtful-cta a,
+  .thoughtful-card a,
+  .thoughtful-card-actions button,
+  .featured-place a{
+    width:100%;
+  }
+}

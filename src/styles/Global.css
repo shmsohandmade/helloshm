@@ -1,0 +1,55 @@
+:root{
+
+  --color-primary:#6c8d9b;
+  --color-secondary:#637c6d;
+  --color-secondary-fade:rgba(99,124,109,0.5);
+  --color-button-primary-fade:linear-gradient(var(--color-secondary-fade), var(--color-secondary-fade)), var(--color-primary);
+  --color-green-deep:#4f6758;
+
+  --color-accent:#a39479;
+
+  --color-bg:#fbfaf7;
+  --color-bg-soft:#f4efe6;
+  --color-surface:#fffdf9;
+
+  --color-text:#2b2b2b;
+
+  --color-muted:#555;
+  
+  --color-green-soft:#eef3ec;
+  --color-ocean-soft:#f5f8f8;
+  --color-sand-soft:#efe7d9;
+  
+}
+
+@font-face{
+  font-family:'Shorelines Script';
+  src:url('/fonts/clean up your mess.ttf') format('truetype');
+  font-display:swap;
+}
+
+@font-face{
+  font-family:'Clean Up Your Mess';
+  src:url('/fonts/clean up your mess.ttf') format('truetype');
+  font-display:swap;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+  min-height:100%;
+}
+
+body{
+  margin:0;
+  color:var(--color-text);
+  background:var(--color-bg);
+}
+
+img{
+  max-width:100%;
+}
