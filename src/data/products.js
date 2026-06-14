@@ -3,7 +3,7 @@ export const productCategories = [
   "Hair care",
   "Body care",
   "Household care"
-]
+] 
 
 export function getCategoryClass(category) {
   return `category-${category.toLowerCase().replaceAll(" ", "-")}`
